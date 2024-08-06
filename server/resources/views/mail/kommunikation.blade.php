@@ -38,6 +38,7 @@
         }
         pre {
             background-color: #f4f4f4;
+            font-size: 21px;
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
