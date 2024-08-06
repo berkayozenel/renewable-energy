@@ -40,9 +40,12 @@
                     <img src="../assets/logo.svg" alt="Renova Energie Logo">
                     <h4>Werde auch du Teil des Renova Energie Teams – bewirb dich jetzt!</h4>
                 </div>
-                <form class="career-content__form">
+                <form class="career-content__form" @submit.prevent="careerSubmit">
                     <div class="form-title">
                         <h3>Karriereform</h3>
+                    </div>
+                    <div v-if="carrierError" class="form-error">
+                        {{ carrierMessage }}
                     </div>
                     <div class="form-element">
                         <label for="nameSurname">Name und Nachname</label>
@@ -71,12 +74,38 @@
 </template>
 
 <script>
+import axios from 'axios'
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
 export default {
     components: {
         'app-nav': Navbar,
         'app-footer': Footer
+    },
+    data(){
+        return{
+            formData:{
+                nameSurname : null,
+                phone       : null,
+                email       : null,
+                cv_writing  : null
+            },
+            carrierError: false,
+            carrierMessage: null
+        }
+    },
+    methods:{
+        careerSubmit(){
+            axios.post('http://localhost:8000/api/send-career', this.formData)
+            .then( res => {
+                if(res.data.success){
+                    console.log("gönderdin bro")
+                }else{
+                    this.carrierError = true;
+                    this.carrierMessage = res.data.message; 
+                }
+            } )
+        }
     }
 }
 </script>
