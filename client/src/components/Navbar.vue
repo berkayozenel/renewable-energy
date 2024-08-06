@@ -74,7 +74,6 @@ export default {
             const navbar = document.querySelector('.navbar');
 
             if (scrollTop > window.innerHeight * 0.8) {
-                console.log(window.innerHeight)
                 navbar.style.backdropFilter = `blur(${this.increasedBlur}px)`;
             } else {
                 navbar.style.backdropFilter = `blur(${this.initialBlur}px)`;

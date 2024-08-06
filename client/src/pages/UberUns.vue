@@ -49,19 +49,19 @@
                     </div>
                     <div class="form-element">
                         <label for="nameSurname">Name und Nachname</label>
-                        <input type="text" id="nameSurname">
+                        <input type="text" id="nameSurname" v-model="formData.name">
                     </div>
                     <div class="form-element">
                         <label for="phone">Telefon</label>
-                        <input type="text" id="phone">
+                        <input type="text" id="phone" v-model="formData.phone">
                     </div>
                     <div class="form-element">
                         <label for="mail">E-Mail</label>
-                        <input type="text" id="mail">
+                        <input type="email" id="mail" v-model="formData.email">
                     </div>
                     <div class="form-element">
                         <label for="cv-writing">Erzählen Sie uns kurz über sich.</label>
-                        <textarea name="cv-writing" id="cv-writing"></textarea>
+                        <textarea name="cv-writing" id="cv-writing" v-model="formData.cv_writing"></textarea>
                     </div>
                     <div class="form-button">
                         <button>Senden</button>
@@ -85,7 +85,7 @@ export default {
     data(){
         return{
             formData:{
-                nameSurname : null,
+                name        : null,
                 phone       : null,
                 email       : null,
                 cv_writing  : null
@@ -96,6 +96,7 @@ export default {
     },
     methods:{
         careerSubmit(){
+            console.log(this.formData)
             axios.post('http://localhost:8000/api/send-career', this.formData)
             .then( res => {
                 if(res.data.success){
