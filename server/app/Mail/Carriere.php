@@ -3,18 +3,14 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
-use Illuminate\Mail\Mailables\Content;
-use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
 class Carriere extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $name;
-    public $surname;
+    public $nameSurname;
     public $phone;
     public $email;
     public $cv_writing;
@@ -25,10 +21,9 @@ class Carriere extends Mailable
      *
      * @return void
      */
-    public function __construct($name, $surname,$phone,$email,$cv_writing)
+    public function __construct($nameSurname,$phone,$email,$cv_writing)
     {
-        $this->name = $name;
-        $this->surname = $surname;
+        $this->nameSurname = $nameSurname;
         $this->phone = $phone;
         $this->email = $email;
         $this->cv_writing = $cv_writing;
@@ -44,8 +39,7 @@ class Carriere extends Mailable
         return $this->view('mail.carriere')
                     ->subject('Carriere | Bewerbungsformular')
                     ->with([
-                        'name'       => $this->name,
-                        'surname'    => $this->surname,
+                        'name'       => $this->nameSurname,
                         'phone'      => $this->phone,
                         'email'      => $this->email,
                         'cv_writing' => $this->cv_writing,

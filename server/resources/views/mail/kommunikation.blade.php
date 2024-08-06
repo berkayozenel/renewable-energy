@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Carriere | Bewerbungsformular</title>
+    <title>Kommunikation | Kontakt Formular</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -49,13 +49,14 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Bewerbungsformular</h1>
+            <h1>Kontakt Formular</h1>
         </div>
-        <p>Absender: <strong>{{ $name }}</strong>,</p>
+        <p>Kommunikationsthema: <strong>{{ $e_subject }}</strong>,</p>
+        <p>Absender: <strong>{{ $nameSurname }}</strong>,</p>
         <p>Telefonnummer: <strong>{{ $phone }}</strong>,</p>
         <p>Email: <strong>{{ $email }}</strong>,</p>
-        <p>Lebenslauf:</p>
-        <pre>{{ $cv_writing }}</pre>
+        <p>Themenbeschreibung:</p>
+        <pre>{{ $description }}</pre>
         <div class="footer">
             <p>Vielen Dank,</p>
             <p>Renova Energie Team</p>
