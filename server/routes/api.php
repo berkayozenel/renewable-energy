@@ -18,5 +18,6 @@ use Illuminate\Support\Facades\Route;
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
-Route::post('send-career',  [MailController::class, 'sendMailCareer']);
-Route::post('send-contact', [MailController::class, 'sendMailContact']);
+Route::post('send-career',   [MailController::class, 'sendMailCareer']);
+Route::post('send-contact',  [MailController::class, 'sendMailContact']);
+Route::post('send-solution', [MailController::class, 'sendMailSolution']);
