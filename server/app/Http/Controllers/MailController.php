@@ -48,7 +48,7 @@ class MailController extends Controller
         $email       = $request -> email;
         $description = $request -> description;
 
-        if(!$subject){
+        if(!$subject || $subject == 'Bitte wählen Sie ein Thema.'){
             return response()->json(['success' => false, 'message' => 'Das Kommunikationsthema ist erforderlich.']);
         }
         if(!$nameSurname){
