@@ -21,7 +21,7 @@
                         <router-link to="/uber-uns">Über uns</router-link>
                     </li>
                     <li>
-                        <a href="#">Kontaktieren</a>
+                        <router-link to="/kontakt">Kontaktieren Sie Uns</router-link>
                     </li>
                 </ul>
                 <div class="hamburger" @click="toggleMenu">
@@ -49,7 +49,7 @@
                         <router-link to="/uber-uns">Über uns</router-link>
                     </li>
                     <li>
-                        <a href="#">Kontaktieren</a>
+                        <router-link to="/kontakt">Kontaktieren Sie Uns</router-link>
                     </li>
             </ul>
         </nav>

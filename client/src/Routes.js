@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home           from './pages/Home.vue';
-import Preis          from './pages/Preis.vue';
-import UberUns        from "./pages/UberUns.vue";
+import Preis          from './pages/Price.vue';
+import UberUns        from "./pages/AboutUs.vue";
+import Contact        from "./pages/Contact.vue";
 
 
 const routes = [
@@ -28,6 +29,15 @@ const routes = [
         component: UberUns,
         meta: {
             title: 'Über Uns | Renova Energie',
+            description: '',
+            keywords: '',
+        }
+    },
+    { 
+        path: '/kontakt', 
+        component: Contact,
+        meta: {
+            title: 'Kontaktieren Sie Uns | Renova Energie',
             description: '',
             keywords: '',
         }
