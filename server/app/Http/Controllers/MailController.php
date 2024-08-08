@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\Carriere;
 use App\Mail\Kommunikation;
 use App\Mail\Solution;
+use App\Models\CareerForm;
+use App\Models\ContactForm;
+use App\Models\SolutionForm;
 
 class MailController extends Controller
 {
@@ -35,9 +38,22 @@ class MailController extends Controller
             return response()->json(['success' => false, 'message' => 'Das Lebenslauf ist erforderlich.']);
         }
 
-        Mail::to($this->mailTo)->send(new Carriere($name,$phone,$email,$cv_writing));
+        $career = new CareerForm();
+        $career-> sender_name_surname = $name;
+        $career-> sender_phone        = $phone;
+        $career-> sender_email        = $email;
+        $career-> cv_writing          = $cv_writing;
+        $result = $career -> save();
 
-        return response()->json(['success' => true, 'message' =>'Email sending successful!']);
+        if($result)
+        {
+            Mail::to($this->mailTo)->send(new Carriere($name,$phone,$email,$cv_writing));
+
+            return response()->json(['success' => true, 'message' =>'Email sending successful!']);
+        }
+        else{
+            return response()->json(['success' => false, 'result' => 'Mail could not be sended!']);
+        }
     }
 
     public function sendMailContact(Request $request)
@@ -67,9 +83,23 @@ class MailController extends Controller
             return response()->json(['success' => false, 'message' => 'Das Themenbeschreibung ist erforderlich.']);
         }
 
-        Mail::to($this->mailTo)->send(new Kommunikation($subject,$nameSurname,$phone,$email,$description));
+        $contact = new ContactForm();
+        $contact-> subject             = $subject;
+        $contact-> sender_name_surname = $nameSurname;
+        $contact-> sender_phone        = $phone;
+        $contact-> sender_email        = $email;
+        $contact-> description          = $description;
+        $result = $contact -> save();
 
-        return response()->json(['success' => true, 'message' => 'Email sending successful!']);
+        if($result)
+        {
+            Mail::to($this->mailTo)->send(new Kommunikation($subject,$nameSurname,$phone,$email,$description));
+
+            return response()->json(['success' => true, 'message' =>'Email sending successful!']);
+        }
+        else{
+            return response()->json(['success' => false, 'result' => 'Mail could not be sended!']);
+        }
     }
 
     public function sendMailSolution(Request $request)
@@ -78,6 +108,7 @@ class MailController extends Controller
         $nameSurname = $request -> nameSurname;
         $phone       = $request -> phone;
         $email       = $request -> email;
+        $country     = $request -> country;
         $city        = $request -> city;
         $district    = $request -> district;
         $stationType = $request -> stationType;
@@ -98,6 +129,9 @@ class MailController extends Controller
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             return response()->json(['success'=>false, 'error' => 'Bitte geben Sie eine gültige E-Mail-Adresse ein.']);
         }
+        if(!$country){
+            return response()->json(['success' => false, 'message' => 'Das Land ist erforderlich.']);
+        }
         if(!$city){
             return response()->json(['success' => false, 'message' => 'Das Stadt ist erforderlich.']);
         }
@@ -111,8 +145,26 @@ class MailController extends Controller
             return response()->json(['success' => false, 'message' => 'Das Themenbeschreibung ist erforderlich.']);
         }
 
-        Mail::to($this->mailTo)->send(new Solution($title,$nameSurname,$phone,$email,$city,$district,$stationType,$description));
+        $solution = new SolutionForm();
+        $solution-> title               = $title;
+        $solution-> sender_name_surname = $nameSurname;
+        $solution-> sender_phone        = $phone;
+        $solution-> sender_email        = $email;
+        $solution-> sender_country      = $country;
+        $solution-> sender_city         = $city;
+        $solution-> sender_district     = $district;
+        $solution-> station_type        = $stationType;
+        $solution-> description         = $description;
+        $result = $solution -> save();
 
-        return response()->json(['success' => true, 'message' => 'Email sending successful!']);
+        if($result)
+        {
+            Mail::to($this->mailTo)->send(new Solution($title,$nameSurname,$phone,$email,$country,$city,$district,$stationType,$description));
+
+            return response()->json(['success' => true, 'message' =>'Email sending successful!']);
+        }
+        else{
+            return response()->json(['success' => false, 'result' => 'Mail could not be sended!']);
+        }
     }
 }
