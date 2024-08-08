@@ -154,7 +154,7 @@ class MailController extends Controller
 
         if($result)
         {
-            Mail::to($this->mailTo)->send(new Solution($title,$nameSurname,$phone,$email,$country,$city,$stationType,$description));
+            Mail::to($this->mailTo)->send(new Solution($title,$nameSurname,$phone,$email,$city,$country,$stationType,$description));
 
             return response()->json(['success' => true, 'message' =>'Email sending successful!']);
         }
