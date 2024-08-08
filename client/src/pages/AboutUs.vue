@@ -131,20 +131,7 @@ export default {
 </script>
 
 <style scoped>
-/* Özel Loader CSS */
-.custom-loader {
-  border: 4px solid #f3f3f3; /* Light gray */
-  border-top: 4px solid #437D1F; /* Renova Energie'nin yeşil rengi */
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-}
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
 .about-us-container {
     min-height: 60vh;
     padding: 7% 10% 2% 10%;

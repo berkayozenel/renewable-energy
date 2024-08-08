@@ -3,6 +3,7 @@ import Home           from './pages/Home.vue';
 import Preis          from './pages/Price.vue';
 import UberUns        from "./pages/AboutUs.vue";
 import Contact        from "./pages/Contact.vue";
+import Services        from "./pages/Services.vue";
 
 
 const routes = [
@@ -38,6 +39,15 @@ const routes = [
         component: Contact,
         meta: {
             title: 'Kontaktieren Sie Uns | Renova Energie',
+            description: '',
+            keywords: '',
+        }
+    },
+    { 
+        path: '/energielösungen', 
+        component: Services,
+        meta: {
+            title: 'Antworten | Renova Energie',
             description: '',
             keywords: '',
         }
