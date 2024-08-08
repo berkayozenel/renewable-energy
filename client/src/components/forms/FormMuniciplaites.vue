@@ -138,6 +138,9 @@ export default {
                     }
                 })
 
+        },
+        closeModal() {
+            this.$emit('close');
         }
     }
 }
@@ -245,5 +248,27 @@ export default {
 
 .form-controls button:hover {
     background-color: #33650E;
+}
+
+.form-error {
+    width: 100%;
+    background-color: #437D1F;
+    color: #FFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 2%;
+}
+
+.form-error span {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: .9rem;
+}
+
+.form-error span i {
+    font-size: 1.2rem;
+    margin-right: 10px;
 }
 </style>
