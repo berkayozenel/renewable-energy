@@ -44,7 +44,7 @@ const routes = [
         }
     },
     { 
-        path: '/energielösungen', 
+        path: '/energielosungen', 
         component: Services,
         meta: {
             title: 'Antworten | Renova Energie',
