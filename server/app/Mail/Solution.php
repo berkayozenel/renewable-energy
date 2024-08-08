@@ -31,8 +31,8 @@ class Solution extends Mailable
         $this->nameSurname = $nameSurname;
         $this->phone       = $phone;
         $this->email       = $email;
-        $this->city        = $city;
         $this->country     = $country;
+        $this->city        = $city;
         $this->stationType = $stationType;
         $this->description = $description;
     }
@@ -51,8 +51,8 @@ class Solution extends Mailable
                         'nameSurname'=> $this->nameSurname,
                         'phone'      => $this->phone,
                         'email'      => $this->email,
-                        'city'       => $this->city,
                         'country'    => $this->country,
+                        'city'       => $this->city,
                         'stationType'=> $this->stationType,
                         'description'=> $this->description,
                     ]);

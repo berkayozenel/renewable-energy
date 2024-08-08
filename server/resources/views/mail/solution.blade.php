@@ -55,8 +55,8 @@
         <p>Absender: <strong>{{ $nameSurname }}</strong></p>
         <p>Telefonnummer: <strong>{{ $phone }}</strong></p>
         <p>Email: <strong>{{ $email }}</strong></p>
+        <p>Land: <strong>{{ $country }}</strong></p>
         <p>Stadt: <strong>{{ $city }}</strong></p>
-        <p>Bezirk: <strong>{{ $district }}</strong></p>
         <p>Stationstyp: <strong>{{ $stationType }}</strong></p>
         <p>Erläuterung:</p>
         <pre>{{ $description }}</pre>
