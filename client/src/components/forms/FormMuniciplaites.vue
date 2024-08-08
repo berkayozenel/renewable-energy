@@ -1,14 +1,17 @@
 <template>
     <div v-if="isModalVisible" class="overlay">   
-        <form class="form-container">
+        <form class="form-container" @submit.prevent="sendMail">
             <div class="form-header">
                 <div class="form-title">
                     <h3>Renova Energie</h3>
-                    <h1>Antragsformular für Kommunen</h1>
+                    <h1>{{ formData.title }}</h1>
                 </div>
                 <div class="icon" @click="closeModal">
                     <span><i class="fa-solid fa-x"></i></span>
                 </div>
+            </div>
+            <div v-if="formError" class="form-error">
+                <span><i class="fa-solid fa-circle-exclamation"></i>{{ errorMessage }}</span>
             </div>
             <div class="form-group">
                 <div class="form-element">
@@ -29,6 +32,7 @@
                     <label for="country">Land</label>
                     <select name="country" id="country" v-model="formData.country">
                     <option value="null">--Wählen--</option>
+                    <option v-for="item in countries" :value="item.country_id">{{ item.country_name }}</option>
                   </select>
                 </div>
             </div>
@@ -37,29 +41,31 @@
                     <label for="city">Stadt</label>
                     <select name="city" id="city" v-model="formData.city">
                     <option value="null">--Wählen--</option>
+                    <option v-for="item in cities" :value="item.city_name">{{ item.city_name }}</option>
                   </select>
                 </div>
                 <div class="form-element">
                     <label for="station-type">Stationstyp</label>
                     <select name="station-type" id="station-type" v-model="formData.stationType">
                     <option value="null">--Wählen--</option>
-                    <option value="AC">AC-Ladestation</option>
-                    <option value="DC">DC-Hochgeschwindigkeitsladestation</option>
+                    <option v-for="item in stations" :value="item.station_type_name">{{ item.station_type_name }}</option>
                   </select>
                 </div>
             </div>
             <div class="form-textarea">
                 <label for="text">Erläuterung</label>
-                <textarea name="text" id="text" v-model="formData.message"></textarea>
+                <textarea name="text" id="text" v-model="formData.description"></textarea>
             </div>
             <div class="form-controls">
-                <button type="button">Schicken</button>
+                <button type="submit">Schicken</button>
             </div>
         </form>
     </div>
 </template>
   
 <script>
+import axios from 'axios';
+import Swal from 'sweetalert2';
 export default {
     props: {
         isVisible: {
@@ -71,19 +77,67 @@ export default {
         return {
             isModalVisible: this.isVisible,
             formData: {
+                title:"Antragsformular für Kommunen",
                 nameSurname: null,
                 phone: null,
                 email: null,
                 country: null,
                 city: null,
                 stationType: null,
-                message: null
-            }
+                description: null
+            },
+            countries:[],
+            cities :[],
+            stations:[],
+            filteredCities: [],
+            formError: false,
+            errorMessage: null
         }
     },
+    mounted(){
+        axios.get("https://renovaenergie.ch/api/index-country")
+        .then(res => {
+            this.countries = res.data
+        });
+        axios.get("https://renovaenergie.ch/api/index-city")
+        .then(res => {
+            this.cities = res.data
+        });
+        axios.get("https://renovaenergie.ch/api/index-station")
+        .then(res => {
+            this.stations = res.data
+        })
+    },
     methods: {
-        closeModal() {
-            this.$emit('close');
+        sendMail(){
+            const selectedCountry = this.countries.find(item => item.country_id === this.formData.country);
+            this.formData.country = selectedCountry ? selectedCountry.country_name : null;
+            const loader = Swal.fire({
+                title: 'Bitte warten...',
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading()
+                }
+            });
+            axios.post('https://renovaenergie.ch/api/send-solution', this.formData)
+                .then(res => {
+                    if (res.data.success) {
+                        Swal.fire({
+                            title: 'Erfolg!',
+                            text: 'Ihr Formular hat uns erreicht. Die Antwort erfolgt schnellstmöglich.',
+                            icon: 'success',
+                            confirmButtonText: 'Ok',
+                            confirmButtonColor: '#437D1F'
+                        }).then(this.$emit('close'))
+
+                    } else {
+                        this.formError = true;
+                        this.errorMessage = res.data.message;
+                        Swal.close();
+
+                    }
+                })
+
         }
     }
 }
