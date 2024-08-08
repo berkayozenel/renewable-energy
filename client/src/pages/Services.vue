@@ -34,11 +34,18 @@
     
                         <h3>Erleben Sie umweltfreundliche Energie</h3>
                         <p>Entdecken Sie die innovativen Lösungen von Renova Energie, um Ihre persönlichen Energiebedürfnisse zu erfüllen und ein umweltfreundliches Leben zu führen. </p>
-                        <div class="contact"><p>Kontaktieren Sie uns und wir rufen Sie umgehend an.</p><span><i class="fa-regular fa-paper-plane"></i> Jetzt informieren</span></div>
+                        <div class="contact">
+                            <p>Kontaktieren Sie uns und wir rufen Sie umgehend an.</p>
+                            <span @click="showIndividuelForm = true">
+                                <i class="fa-regular fa-paper-plane"></i> Jetzt informieren
+                            </span>
+                    </div>
                     </section>
-                    
+    
                 </div>
             </div>
+            <form-individuel v-if="showIndividuelForm" :isVisible="showIndividuelForm" @close="showIndividuelForm = false" />
+
             <div class="service-card-left" style="flex-direction: row-reverse;">
                 <div class="service-card__image">
                     <img src="../assets/service-page/isyeri-plaza.jpg" alt="Innovative Energielösungen für moderne Bürogebäude" style="border-radius: 0 15px 15px 0; height: 870px;">
@@ -66,11 +73,20 @@
     
                         <h3>Investieren Sie in die Zukunft Ihres Unternehmens</h3>
                         <p>Mit Renova Energie setzen Sie auf innovative Lösungen, die Ihrem Unternehmen nicht nur heute, sondern auch in der Zukunft zugutekommen werden.</p>
-                        <div class="contact"><p>Kontaktieren Sie uns und wir rufen Sie umgehend an.</p><span><i class="fa-regular fa-paper-plane"></i> Jetzt informieren</span></div>
-
+                        <div class="contact">
+                            <p>Kontaktieren Sie uns und wir rufen Sie umgehend an.</p>
+                            <span @click="showPlazaForm = true">
+                                <i class="fa-regular fa-paper-plane"></i> Jetzt informieren
+                            </span>
+                        </div>
+    
                     </section>
                 </div>
             </div>
+
+            <form-plaza v-if="showPlazaForm" :isVisible="showPlazaForm" @close="showPlazaForm = false" />
+
+
             <div class="service-card-left">
                 <div class="service-card__image">
                     <img src="../assets/service-page/belediye.jpg" alt="Innovative Dienstleistungen für zukunftsweisende öffentliche Institutionen" style="height: 750px;">
@@ -94,11 +110,19 @@
     
                         <h3>Kompatible mobile Anwendungen</h3>
                         <p>Besitzer von Elektrofahrzeugen können den Ladezustand ihrer Fahrzeuge über die Oncharge-Mobilanwendung, die mit allen Smartphones kompatibel ist, überwachen und ihre Zahlungen digital abwickeln.</p>
-                        <div class="contact"><p>Kontaktieren Sie uns und wir rufen Sie umgehend an.</p><span><i class="fa-regular fa-paper-plane"></i> Jetzt informieren</span></div>
-
+                        <div class="contact">
+                            <p>Kontaktieren Sie uns und wir rufen Sie umgehend an.</p>
+                            <span @click="showMunicipalitiesForm = true">
+                                <i class="fa-regular fa-paper-plane"></i> Jetzt informieren
+                            </span>
+                        </div>
+    
                     </section>
                 </div>
             </div>
+
+            <form-municiplaites v-if="showMunicipalitiesForm" :isVisible="showMunicipalitiesForm" @close="showMunicipalitiesForm = false" />
+
             <div class="service-card-left" style="flex-direction: row-reverse;">
                 <div class="service-card__image">
                     <img src="../assets/service-page/akaryakit.jpg" alt="Energielösungen für Tankstellen" style="border-radius: 0 15px 15px 0; height: 700px;">
@@ -114,7 +138,8 @@
     
                         <h3>Integration von Ladestationen für Elektrofahrzeuge</h3>
                         <p>Unsere Ladestationen für Elektrofahrzeuge können nahtlos in die bestehende Infrastruktur von Tankstellen integriert werden, sodass diese sowohl Kraftstoff- als auch Elektrofahrzeug-Ladeleistungen anbieten können, was die Kundenzufriedenheit
-                            erhöht.</p>
+                            erhöht.
+                        </p>
     
                         <h3>Solaranlagen für nachhaltige Energieversorgung</h3>
                         <p>Unsere Solaranlagen ermöglichen es, den Energiebedarf Ihrer Stationen teilweise oder vollständig mit Sonnenenergie zu decken, wodurch die Betriebskosten gesenkt und die Umweltauswirkungen reduziert werden.</p>
@@ -125,11 +150,18 @@
     
                         <h3>Entdecken Sie die Lösungen von Renova Energie</h3>
                         <p>Entdecken Sie die Lösungen von Renova Energie, um die Effizienz Ihrer Tankstelle zu steigern und umweltfreundliche Dienstleistungen anzubieten.</p>
-                        <div class="contact"><p>Kontaktieren Sie uns und wir rufen Sie umgehend an.</p><span><i class="fa-regular fa-paper-plane"></i> Jetzt informieren</span></div>
-
+                        <div class="contact">
+                            <p>Kontaktieren Sie uns und wir rufen Sie umgehend an.</p>
+                            <span @click="showGasStationForm = true">
+                                <i class="fa-regular fa-paper-plane"></i> Jetzt informieren
+                            </span>
+                        </div>
+    
                     </section>
                 </div>
             </div>
+            <form-gas-station v-if="showGasStationForm" :isVisible="showGasStationForm" @close="showGasStationForm = false" />
+
             <div class="service-card-left">
                 <div class="service-card__image">
                     <img src="../assets/service-page/otopark.jpg" alt="Energielösungen für Parkplätze" style="height: 750px;">
@@ -140,24 +172,34 @@
                     </header>
                     <section class="content">
                         <h2>Nachhaltigkeit und Effizienz für moderne Städte</h2>
-                        <p>In modernen Städten spielt das Energiemanagement von Parkplätzen eine entscheidende Rolle für Nachhaltigkeit und Effizienz. Renova Energie bietet innovative Energielösungen für Parkplätze, um sowohl die Umweltbelastung zu reduzieren als auch den Komfort für die Nutzer zu erhöhen.</p>
-            
+                        <p>In modernen Städten spielt das Energiemanagement von Parkplätzen eine entscheidende Rolle für Nachhaltigkeit und Effizienz. Renova Energie bietet innovative Energielösungen für Parkplätze, um sowohl die Umweltbelastung zu reduzieren
+                            als auch den Komfort für die Nutzer zu erhöhen.</p>
+    
                         <h3>Integration von Ladestationen für Elektrofahrzeuge</h3>
-                        <p>Unsere Ladestationen für Elektrofahrzeuge können nahtlos in die bestehende Infrastruktur Ihrer Parkplätze integriert werden. So können Sie Ihren Besuchern die Möglichkeit bieten, ihre Elektrofahrzeuge aufzuladen, und Ihren Parkplatz attraktiver gestalten.</p>
-            
+                        <p>Unsere Ladestationen für Elektrofahrzeuge können nahtlos in die bestehende Infrastruktur Ihrer Parkplätze integriert werden. So können Sie Ihren Besuchern die Möglichkeit bieten, ihre Elektrofahrzeuge aufzuladen, und Ihren Parkplatz
+                            attraktiver gestalten.</p>
+    
                         <h3>Solaranlagen für nachhaltige Energie</h3>
                         <p>Darüber hinaus können unsere Solaranlagen den Energiebedarf Ihres Parkplatzes durch Sonnenenergie decken, wodurch Sie Ihre Energiekosten senken und die Umweltauswirkungen reduzieren können.</p>
-            
+    
                         <h3>Optimierung des Energieverbrauchs</h3>
-                        <p>Die Lösungen von Renova Energie optimieren den Energieverbrauch Ihrer Parkplätze und unterstützen eine nachhaltige Energieverwendung. Unsere intelligenten Energiemanagementsysteme helfen Ihnen, den Energiebedarf Ihrer Parkplätze effizient zu decken.</p>
-            
+                        <p>Die Lösungen von Renova Energie optimieren den Energieverbrauch Ihrer Parkplätze und unterstützen eine nachhaltige Energieverwendung. Unsere intelligenten Energiemanagementsysteme helfen Ihnen, den Energiebedarf Ihrer Parkplätze effizient
+                            zu decken.</p>
+    
                         <h3>Entdecken Sie die Lösungen von Renova Energie</h3>
                         <p>Entdecken Sie die Lösungen von Renova Energie, um die Energieeffizienz Ihres Parkplatzes zu steigern und umweltfreundliche Dienstleistungen anzubieten.</p>
-                        <div class="contact"><p>Kontaktieren Sie uns und wir rufen Sie umgehend an.</p><span><i class="fa-regular fa-paper-plane"></i> Jetzt informieren</span></div>
-
+                        <div class="contact">
+                            <p>Kontaktieren Sie uns und wir rufen Sie umgehend an.</p>
+                            <span @click="showCarParkForm = true">
+                                <i class="fa-regular fa-paper-plane"></i> Jetzt informieren
+                            </span>
+                        </div>
+    
                     </section>
                 </div>
             </div>
+            <form-car-park v-if="showCarParkForm" :isVisible="showCarParkForm" @close="showCarParkForm = false" />
+
         </div>
         <app-footer />
     </div>
@@ -166,10 +208,30 @@
 <script>
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
+import FormIndividuell from '../components/forms/FormInvidual.vue'
+import FormWorkPlacesPlazas from '@/components/forms/FormPlazas.vue';
+import FormCarPark from '@/components/forms/FormCarPark.vue';
+import FormGasStation from '@/components/forms/FormGasStation.vue';
+import FormMuniciplaites from '@/components/forms/FormMuniciplaites.vue';
 export default {
     components: {
         'app-nav': Navbar,
-        'app-footer': Footer
+        'app-footer': Footer,
+        "form-individuel": FormIndividuell,
+        "form-plaza": FormWorkPlacesPlazas,
+        "form-car-park": FormCarPark,
+        "form-gas-station": FormGasStation,
+        "form-municiplaites": FormMuniciplaites
+    },
+    data() {
+        return {
+            showIndividuelForm: false,
+            showPlazaForm: false,
+            showCarParkForm: false,
+            showGasStationForm: false,
+            showMunicipalitiesForm: false,
+            
+        }
     }
 }
 </script>
@@ -263,18 +325,21 @@ export default {
     margin-bottom: 1%;
     text-indent: 2%;
 }
-.contact{
+
+.contact {
     display: flex;
     justify-content: start;
     align-items: center;
     width: 100%;
     margin-top: 2%;
 }
-.contact p{
+
+.contact p {
     flex-basis: 65%;
     font-style: normal;
 }
-.contact span{
+
+.contact span {
     cursor: pointer;
     flex-basis: 30%;
     border: 2px solid #417D1F;
@@ -286,11 +351,13 @@ export default {
     align-items: center;
     transition: all .4s ease;
 }
+
 .contact span i {
     margin-right: 10px;
     font-size: 1.2rem;
 }
-.contact span:hover{
+
+.contact span:hover {
     background: #417D1F;
     color: #FFF;
 }
