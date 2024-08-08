@@ -240,6 +240,7 @@ export default {
 .services-container {
     min-height: 60vh;
     padding: 7% 10% 2% 10%;
+
 }
 
 .services-title {
@@ -276,6 +277,8 @@ export default {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 20px;
     margin-bottom: 5%;
+    animation: fadeInOpacity 2s forwards;
+
 }
 
 .service-card__image {

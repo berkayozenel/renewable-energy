@@ -2,7 +2,7 @@
 <template>
     <div class="container">
         <header class="navbar">
-            <router-link  to="/"><img class="logo"  src="../assets/logo.svg" alt="Renova Energie Logo"/></router-link>
+            <router-link  to="/"><img class="logo"  src="../assets/logo-white.svg" alt="Renova Energie Logo"/></router-link>
             <nav>
                 <ul class="nav-links">
                     <li>
@@ -100,7 +100,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.3); 
+    background-color: transparent; 
     color: #437D1F;
     /* box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px; */
     backdrop-filter: blur(0px); 
@@ -123,7 +123,7 @@ export default {
 }
 
 .nav-links a {
-    color: #437D1F;
+    color: #e2e2e2;
     text-decoration: none;
     position: relative;
 }

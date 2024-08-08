@@ -309,4 +309,9 @@ export default {
     font-size: 1.2rem;
     margin-right: 10px;
 }
+
+strong{
+    font-weight: 400;
+    color: #437D1F;
+}
 </style>
