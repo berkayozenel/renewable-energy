@@ -30,7 +30,7 @@
                 </div>
                 <div class="form-element">
                     <label for="country">Land</label>
-                    <select name="country" id="country" v-model="formData.country">
+                    <select name="country" id="country" v-model="formData.country" @change="filterCountry(formData.country)">
                     <option value="null">--Wählen--</option>
                     <option v-for="item in countries" :value="item.country_id">{{ item.country_name }}</option>
                   </select>
@@ -41,7 +41,7 @@
                     <label for="city">Stadt</label>
                     <select name="city" id="city" v-model="formData.city">
                     <option value="null">--Wählen--</option>
-                    <option v-for="item in cities" :value="item.city_name">{{ item.city_name }}</option>
+                    <option v-for="item in filteredCities" :value="item.city_name">{{ item.city_name }}</option>
                   </select>
                 </div>
                 <div class="form-element">
@@ -109,6 +109,9 @@ export default {
         })
     },
     methods: {
+        filterCountry(id) {
+            this.filteredCities = this.cities.filter(city => city.country_id == id)
+        },
         sendMail(){
             const selectedCountry = this.countries.find(item => item.country_id === this.formData.country);
             this.formData.country = selectedCountry ? selectedCountry.country_name : null;
