@@ -1,27 +1,26 @@
 <template>
     <div>
-        <app-form-individuell></app-form-individuell>
-        <app-form-WorkPlaza></app-form-WorkPlaza>
+        <form-municiplaites></form-municiplaites>
     </div>
 </template>
 
 <script>
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
-import formIndividuell from '../components/forms/form-individual.vue'
-import formWorkplacesPlazas from '@/components/forms/form-workplacesPlazas.vue';
-import formCarPark from '@/components/forms/form-carPark.vue';
-import formGasStation from '@/components/forms/form-gasStation.vue';
-import formMuniciplaites from '@/components/forms/form-municiplaites.vue';
+import formIndividuell from '../components/forms/FormInvidual.vue'
+import formWorkplacesPlazas from '@/components/forms/FormPlazas.vue';
+import formCarPark from '@/components/forms/FormCarPark.vue';
+import formGasStation from '@/components/forms/FormGasStation.vue';
+import formMuniciplaites from '@/components/forms/FormMuniciplaites.vue';
 export default {
     components:{
         'app-nav'   : Navbar,
         'app-footer': Footer,
-        "app-form-individuell" : formIndividuell,
-        "app-form-WorkPlaza" : formWorkplacesPlazas,
-        "app-form-carPark" :formCarPark,
-        "app-form-gasStation" :formGasStation,
-        "app-form-municiplaites":formMuniciplaites
+        "form-individuel" : formIndividuell,
+        "form-plaza" : formWorkplacesPlazas,
+        "form-car-park" :formCarPark,
+        "form-gas-station" :formGasStation,
+        "form-municiplaites":formMuniciplaites
     }
 }
 </script>
