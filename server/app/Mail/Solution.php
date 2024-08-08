@@ -14,8 +14,8 @@ class Solution extends Mailable
     public $nameSurname;
     public $phone;
     public $email;
+    public $country;
     public $city;
-    public $district;
     public $stationType;
     public $description;
 
@@ -25,14 +25,14 @@ class Solution extends Mailable
      *
      * @return void
      */
-    public function __construct($title,$nameSurname,$phone,$email,$city,$district,$stationType,$description)
+    public function __construct($title,$nameSurname,$phone,$email,$city,$country,$stationType,$description)
     {
         $this->title       = $title;
         $this->nameSurname = $nameSurname;
         $this->phone       = $phone;
         $this->email       = $email;
         $this->city        = $city;
-        $this->district    = $district;
+        $this->country     = $country;
         $this->stationType = $stationType;
         $this->description = $description;
     }
@@ -52,7 +52,7 @@ class Solution extends Mailable
                         'phone'      => $this->phone,
                         'email'      => $this->email,
                         'city'       => $this->city,
-                        'district'   => $this->district,
+                        'country'    => $this->country,
                         'stationType'=> $this->stationType,
                         'description'=> $this->description,
                     ]);

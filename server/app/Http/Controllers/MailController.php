@@ -110,7 +110,6 @@ class MailController extends Controller
         $email       = $request -> email;
         $country     = $request -> country;
         $city        = $request -> city;
-        $district    = $request -> district;
         $stationType = $request -> stationType;
         $description = $request -> description;
 
@@ -135,9 +134,6 @@ class MailController extends Controller
         if(!$city){
             return response()->json(['success' => false, 'message' => 'Das Stadt ist erforderlich.']);
         }
-        if(!$district){
-            return response()->json(['success' => false, 'message' => 'Das Bezirk ist erforderlich.']);
-        }
         if(!$stationType){
             return response()->json(['success' => false, 'message' => 'Das Stationstyp ist erforderlich.']);
         }
@@ -152,14 +148,13 @@ class MailController extends Controller
         $solution-> sender_email        = $email;
         $solution-> sender_country      = $country;
         $solution-> sender_city         = $city;
-        $solution-> sender_district     = $district;
         $solution-> station_type        = $stationType;
         $solution-> description         = $description;
         $result = $solution -> save();
 
         if($result)
         {
-            Mail::to($this->mailTo)->send(new Solution($title,$nameSurname,$phone,$email,$country,$city,$district,$stationType,$description));
+            Mail::to($this->mailTo)->send(new Solution($title,$nameSurname,$phone,$email,$country,$city,$stationType,$description));
 
             return response()->json(['success' => true, 'message' =>'Email sending successful!']);
         }

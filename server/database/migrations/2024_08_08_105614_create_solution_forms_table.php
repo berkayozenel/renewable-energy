@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('sender_email');
             $table->string('sender_country');
             $table->string('sender_city');
-            $table->string('sender_district');
+            $table->string('sender_district')->nullable();
             $table->string('station_type');
             $table->string('description',1500);
             $table->timestamps();
