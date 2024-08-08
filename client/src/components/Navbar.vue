@@ -12,7 +12,7 @@
                         <a href="#">Ladestationen</a>
                     </li>
                     <li>
-                        <a href="#">Antworten</a>
+                        <router-link to="/energielösungen">Energielösungen</router-link>
                     </li>
                     <li>
                         <router-link to="/preisgestaltung">Preisgestaltung</router-link>
