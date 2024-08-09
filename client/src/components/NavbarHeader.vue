@@ -74,7 +74,7 @@
         this.isScrolled = scrollTop > window.innerHeight * 0.8;
       },
       logo(isScrolled){
-        return isScrolled ? '../assets/logo.svg': '../assets/logo-white.svg'
+        return isScrolled ? 'https://renovaenergie.ch/storage/logo/logo.svg': 'https://renovaenergie.ch/storage/logo/logo-white.svg'
       }
     },
     mounted() {
