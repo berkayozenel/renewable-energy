@@ -2,6 +2,7 @@
     <div class="features-container">
         <div v-for="feature in features" :key="feature.id" class="features-card">
             <div class="features-card__image">
+                IMAGE
             </div>
             <div class="features-card__text">
                 <h2>{{ feature.title }}</h2>
@@ -69,15 +70,15 @@ export default {
 .features-card {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 300px;
+    flex-basis: 25%;
     text-align: center;
+    margin: 2% 0;
 }
 
 .features-card__image {
     height: 150px;
-    background-color: #f0f0f0; /* Placeholder color for image */
+    /* background-color: #f0f0f0; Placeholder color for image */
 }
 
 .features-card__text {
@@ -87,11 +88,12 @@ export default {
 .features-card__text h2 {
     margin: 0;
     font-size: 1.5rem;
-    color: #333;
+    color: #437D1F;
 }
 
 .features-card__text p {
     margin: 10px 0 0;
-    color: #666;
+    color: #2e2e2e;
+    opacity: .8;
 }
 </style>

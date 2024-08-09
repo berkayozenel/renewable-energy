@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div class="footer-logo">
-            <img src="../assets/logo-white.svg" alt="Renova Energie Logo">
+            <img src="https://renovaenergie.ch/storage/logo/logo-white.svg" alt="Renova Energie Logo">
         </div>
         <div class="footer-contact">
             <h4>Kommunikation</h4>

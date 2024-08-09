@@ -2,7 +2,7 @@
     <div class="container">
       <header :class="['navbar', { 'scrolled': isScrolled }]">
         <router-link to="/">
-          <img :src="isScrolled ? 'src/assets/logo.svg' : 'src/assets/logo-white.svg'" alt="Renova Energie Logo" class="logo" />
+          <img :src="isScrolled ? 'https://renovaenergie.ch/storage/logo/logo.svg' : 'https://renovaenergie.ch/storage/logo/logo-white.svg'" alt="Renova Energie Logo" class="logo" />
         </router-link>
         <nav>
           <ul class="nav-links" :class="{ 'scrolled-links': isScrolled }">
