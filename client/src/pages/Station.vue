@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <app-nav />
-        <div class="station-container" style="margin-top: 10%;">
+        <div class="station-container">
             <div class="station__text">
                 <h1>
                     <span v-for="(char, index) in text" :key="index" :class="{ space: char === ' ' }" :style="{ '--i': index + 1 }">
@@ -37,6 +37,8 @@ export default {
 .container {
     height: 100vh;
     background-image: url('../assets/bgolası.jpg');
+    background-position: center;
+    background-size: contain;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,6 +47,7 @@ export default {
 .station-container {
     display: flex;
     align-items: center;
+    margin-top: -3%;
 }
 
 .station__text h1 {
