@@ -2,7 +2,7 @@
 <template>
     <div class="container">
         <header class="navbar">
-            <router-link  to="/"><img class="logo"  src="../assets/logo.svg" alt="Renova Energie Logo"/></router-link>
+            <router-link  to="/"><img class="logo"  src="https://renovaenergie.ch/storage/logo/logo.svg" alt="Renova Energie Logo"/></router-link>
             <nav>
                 <ul class="nav-links">
                     <li>
