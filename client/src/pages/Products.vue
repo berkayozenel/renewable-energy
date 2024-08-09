@@ -15,7 +15,7 @@
                 <div v-for="item in products.filter(product => product.category === 'Charging Station')"
                     class="product-card">
                     <div class="product-card__image">
-                        <img src="../assets/features/enviroment.svg" :alt="item.name">
+                        <img :src="item.image" :alt="item.name">
                     </div>
                     <div class="product-card__content">
                         <h2>{{ item.name }} ({{ item.power }})</h2>
@@ -62,6 +62,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
 export default {
@@ -139,6 +140,12 @@ export default {
                     }
                 ]
         }
+    },
+    mounted(){
+        axios.get('https://renovaenergie.ch/api/product-features')
+        .then( res => {
+            this.products = res.data
+        } )
     }
 }
 </script>
