@@ -37,7 +37,7 @@
             </div>
             <div class="career-content">
                 <div class="career-content__slogan">
-                    <img src="../assets/logo.svg" alt="Renova Energie Logo">
+                    <img src="https://renovaenergie.ch/storage/logo/logo.svg" alt="Renova Energie Logo">
                     <h4>Werde auch du Teil des Renova Energie Teams – bewirb dich jetzt!</h4>
                 </div>
                 <form class="career-content__form" @submit.prevent="careerSubmit">

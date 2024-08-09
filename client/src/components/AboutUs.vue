@@ -19,7 +19,7 @@
                 <div class="route-button"><router-link to="/uber-uns">Mehr lesen</router-link></div>
             </div>
             <div class="about-us-content__image">
-                <img src="../assets/about.jpg" alt="">
+                <img src="https://renovaenergie.ch/storage/about.jpg" alt="">
             </div>
         </div>
     </div>

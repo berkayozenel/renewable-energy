@@ -36,7 +36,7 @@ export default {
 <style scoped>
 .container {
     height: 100vh;
-    background-image: url('../assets/bgolası.jpg');
+    background-image: url('https://renovaenergie.ch/storage/bgolası.jpg');
     background-position: center;
     background-size: contain;
     display: flex;

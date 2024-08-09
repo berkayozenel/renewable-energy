@@ -13,7 +13,7 @@
             </div>
             <div class="service-card-left">
                 <div class="service-card__image">
-                    <img src="../assets/service-page/bireysel-kullanim.jpg" alt="Innovative Energielösungen">
+                    <img src="https://renovaenergie.ch/storage/service-page/individual-use.jpg" alt="Innovative Energielösungen">
                 </div>
                 <div class="service-card__text">
                     <header>
@@ -48,7 +48,7 @@
 
             <div class="service-card-left" style="flex-direction: row-reverse;">
                 <div class="service-card__image">
-                    <img src="../assets/service-page/isyeri-plaza.jpg" alt="Innovative Energielösungen für moderne Bürogebäude" style="border-radius: 0 15px 15px 0; height: 870px;">
+                    <img src="https://renovaenergie.ch/storage/service-page/workplace-plaza.jpg" alt="Innovative Energielösungen für moderne Bürogebäude" style="border-radius: 0 15px 15px 0; height: 870px;">
                 </div>
                 <div class="service-card__text">
                     <header>
@@ -89,7 +89,7 @@
 
             <div class="service-card-left">
                 <div class="service-card__image">
-                    <img src="../assets/service-page/belediye.jpg" alt="Innovative Dienstleistungen für zukunftsweisende öffentliche Institutionen" style="height: 750px;">
+                    <img src="https://renovaenergie.ch/storage/service-page/municipality.jpg" alt="Innovative Dienstleistungen für zukunftsweisende öffentliche Institutionen" style="height: 750px;">
                 </div>
                 <div class="service-card__text">
                     <header>
@@ -125,7 +125,7 @@
 
             <div class="service-card-left" style="flex-direction: row-reverse;">
                 <div class="service-card__image">
-                    <img src="../assets/service-page/akaryakit.jpg" alt="Energielösungen für Tankstellen" style="border-radius: 0 15px 15px 0; height: 700px;">
+                    <img src="https://renovaenergie.ch/storage/service-page/station.jpg" alt="Energielösungen für Tankstellen" style="border-radius: 0 15px 15px 0; height: 700px;">
                 </div>
                 <div class="service-card__text">
                     <header>
@@ -164,7 +164,7 @@
 
             <div class="service-card-left">
                 <div class="service-card__image">
-                    <img src="../assets/service-page/otopark.jpg" alt="Energielösungen für Parkplätze" style="height: 750px;">
+                    <img src="https://renovaenergie.ch/storage/service-page/parking.jpg" alt="Energielösungen für Parkplätze" style="height: 750px;">
                 </div>
                 <div class="service-card__text">
                     <header>

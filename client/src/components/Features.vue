@@ -19,37 +19,37 @@ export default {
             features: [
                 {
                     id: 1,
-                    image: '', 
+                    image: 'https://renovaenergie.ch/storage/features/reability.svg', 
                     title: 'Zuverlässigkeit',
                     detail: 'Wir bieten zuverlässige Energielösungen mit kontinuierlichem Service und hochwertigen Produkten.'
                 },
                 {
                     id: 2,
-                    image: '', 
+                    image: 'https://renovaenergie.ch/storage/features/customer-service.svg', 
                     title: 'Kundenservice',
                     detail: 'Unser leicht erreichbares Kundenserviceteam bietet schnelle Lösungen und fachkundige Unterstützung.'
                 },
                 {
                     id: 3,
-                    image: '', 
+                    image: 'https://renovaenergie.ch/storage/features/transparency.svg', 
                     title: 'Transparenz',
                     detail: 'Wir gewährleisten Vertrauen durch transparente Preisgestaltung und klare Informationen.'
                 },
                 {
                     id: 4,
-                    image: '', 
+                    image: 'https://renovaenergie.ch/storage/features/enviroment.svg', 
                     title: 'Umweltfreundliche Anwendungen',
                     detail: 'Wir bieten umweltfreundliche und energieeffiziente Lösungen für eine nachhaltige Zukunft.'
                 },
                 {
                     id: 5,
-                    image: '',
+                    image: 'https://renovaenergie.ch/storage/features/technological.svg',
                     title: 'Technologische Innovation',
                     detail: 'Wir liefern innovative Energielösungen mit neuester Technologie und benutzerfreundlichen Systemen.'
                 },
                 {
                     id: 6,
-                    image: '', 
+                    image: 'https://renovaenergie.ch/storage/features/flexibility.svg', 
                     title: 'Flexibilität',
                     detail: 'Wir bieten anpassbare Lösungen und flexible Vertragsbedingungen, um den Bedürfnissen unserer Kunden gerecht zu werden.'
                 }

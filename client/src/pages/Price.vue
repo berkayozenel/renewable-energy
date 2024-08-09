@@ -13,7 +13,7 @@
             </div>
             <div class="preis-section-one">
                 <div class="preis-section-one__image">
-                    <img src="../assets/preis-page/asset-1.jpg" >
+                    <img src="https://renovaenergie.ch/storage/preis-page/asset-1.jpg" >
                 </div>
                 <div class="preis-section-one__content">
                     <h3>AC-Steckdosentarif</h3>
@@ -32,7 +32,7 @@
             </div>
             <div class="preis-section-two">
                 <div class="preis-section-two__image">
-                    <img src="../assets/preis-page/asset-2.jpg" >
+                    <img src="https://renovaenergie.ch/storage/preis-page/asset-2.jpg" >
                 </div>
                 <div class="preis-section-two__content">
                     <h3>DC-Steckdosentarif</h3>
