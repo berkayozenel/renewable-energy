@@ -2,7 +2,6 @@
     <div class="features-container">
         <div v-for="feature in features" :key="feature.id" class="features-card">
             <div class="features-card__image">
-                <!-- Buraya özellik resmi eklenebilir -->
             </div>
             <div class="features-card__text">
                 <h2>{{ feature.title }}</h2>
@@ -19,37 +18,37 @@ export default {
             features: [
                 {
                     id: 1,
-                    image: '', // Resim URL'si buraya eklenebilir
+                    image: '', 
                     title: 'Zuverlässigkeit',
                     detail: 'Wir bieten zuverlässige Energielösungen mit kontinuierlichem Service und hochwertigen Produkten.'
                 },
                 {
                     id: 2,
-                    image: '', // Resim URL'si buraya eklenebilir
+                    image: '', 
                     title: 'Kundenservice',
                     detail: 'Unser leicht erreichbares Kundenserviceteam bietet schnelle Lösungen und fachkundige Unterstützung.'
                 },
                 {
                     id: 3,
-                    image: '', // Resim URL'si buraya eklenebilir
+                    image: '', 
                     title: 'Transparenz',
                     detail: 'Wir gewährleisten Vertrauen durch transparente Preisgestaltung und klare Informationen.'
                 },
                 {
                     id: 4,
-                    image: '', // Resim URL'si buraya eklenebilir
+                    image: '', 
                     title: 'Umweltfreundliche Anwendungen',
                     detail: 'Wir bieten umweltfreundliche und energieeffiziente Lösungen für eine nachhaltige Zukunft.'
                 },
                 {
                     id: 5,
-                    image: '', // Resim URL'si buraya eklenebilir
+                    image: '',
                     title: 'Technologische Innovation',
                     detail: 'Wir liefern innovative Energielösungen mit neuester Technologie und benutzerfreundlichen Systemen.'
                 },
                 {
                     id: 6,
-                    image: '', // Resim URL'si buraya eklenebilir
+                    image: '', 
                     title: 'Flexibilität',
                     detail: 'Wir bieten anpassbare Lösungen und flexible Vertragsbedingungen, um den Bedürfnissen unserer Kunden gerecht zu werden.'
                 }
