@@ -4,6 +4,7 @@
         <app-header     />
         <about-us       />
         <app-features   />
+        <app-faqs       />
     </div>
 </template>
 
@@ -13,6 +14,7 @@ import Header     from '../components/Header.vue'
 import Footer     from '../components/Footer.vue'
 import AboutUs    from '../components/AboutUs.vue';
 import Features   from '../components/Features.vue';
+import Faqs       from '../components/Faqs.vue';
 
 export default {
     components:{
@@ -20,7 +22,8 @@ export default {
         'app-header'   : Header,
         'app-footer'   : Footer,
         'about-us'     : AboutUs,
-        'app-features' : Features
+        'app-features' : Features,
+        'app-faqs'     : Faqs
     }
 }
 </script>

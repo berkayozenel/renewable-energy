@@ -2,7 +2,7 @@
     <div class="features-container">
         <div v-for="feature in features" :key="feature.id" class="features-card">
             <div class="features-card__image">
-                IMAGE
+                <img :src="feature.image" alt="">
             </div>
             <div class="features-card__text">
                 <h2>{{ feature.title }}</h2>
@@ -77,10 +77,15 @@ export default {
 }
 
 .features-card__image {
+    width: 100%;
     height: 150px;
     /* background-color: #f0f0f0; Placeholder color for image */
 }
-
+.features-card__image img{
+    color: #437D1F;
+    width: 80%;
+    height: 80%;
+}
 .features-card__text {
     padding: 20px;
 }
