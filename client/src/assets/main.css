@@ -49,3 +49,11 @@ html {
     opacity: 1;
   }
 }
+@keyframes fadeInBlur {
+  0%   {
+    filter: blur(10px);
+  }
+  100% {
+    filter: blur(0);
+  }
+}

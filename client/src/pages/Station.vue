@@ -48,6 +48,7 @@ export default {
     display: flex;
     align-items: center;
     margin-top: -3%;
+    animation: fadeInOpacityBlack 2s forwards;
 }
 
 .station__text h1 {

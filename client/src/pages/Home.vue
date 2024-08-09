@@ -6,6 +6,7 @@
         <app-features   />
         <app-faqs       />
         <app-contact    />
+        <app-footer     />
     </div>
 </template>
 
@@ -31,6 +32,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

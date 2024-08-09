@@ -106,6 +106,8 @@
   .navbar.scrolled {
     background-color: white;
     color: #437D1F;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+
   }
   
   .logo {

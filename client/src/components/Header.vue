@@ -18,6 +18,7 @@
     justify-content: center;
     align-items: center;
     color: #FFF;
+    animation: fadeInBlur 1s forwards;
   }
   
   .header-container::before {
