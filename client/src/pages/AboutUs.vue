@@ -12,17 +12,27 @@
                 </div>
             </div>
             <div class="section">
-                <p><strong>Renova Energie</strong> engagiert sich für innovative und nachhaltige Energielösungen und ist in ganz Europa und der Schweiz tätig. Wir bieten den Verkauf, das Marketing und die Installation von Ladestationen für Elektrofahrzeuge sowie
+                <p><strong>Renova Energie</strong> engagiert sich für innovative und nachhaltige Energielösungen und ist
+                    in ganz Europa und der Schweiz tätig. Wir bieten den Verkauf, das Marketing und die Installation von
+                    Ladestationen für Elektrofahrzeuge sowie
                     Solarpanelen an, um eine umweltfreundliche und kosteneffiziente Energienutzung zu fördern.</p>
                 <br>
-                <p>In einer Zeit, in der der Markt für Elektrofahrzeuge rasant wächst und die Energiekosten steigen, wird der Bedarf an umweltfreundlichen Energielösungen für Privatpersonen und Unternehmen immer dringender. <strong>Renova Energie</strong> stellt
-                    hochqualitative Ladestationen für Elektrofahrzeuge und Solarsysteme bereit und bietet massgeschneiderte Lösungen für Ihre Bedürfnisse.</p>
+                <p>In einer Zeit, in der der Markt für Elektrofahrzeuge rasant wächst und die Energiekosten steigen,
+                    wird der Bedarf an umweltfreundlichen Energielösungen für Privatpersonen und Unternehmen immer
+                    dringender. <strong>Renova Energie</strong> stellt
+                    hochqualitative Ladestationen für Elektrofahrzeuge und Solarsysteme bereit und bietet
+                    massgeschneiderte Lösungen für Ihre Bedürfnisse.</p>
                 <br>
-                <p>Unser erfahrenes Team arbeitet eng mit Ihnen zusammen, um sicherzustellen, dass Sie den bestmöglichen Service erhalten. Wir sind Experten in der Installation von Solarpanelen und der Integration von Ladestationen und sind stolz darauf, umweltfreundliche
+                <p>Unser erfahrenes Team arbeitet eng mit Ihnen zusammen, um sicherzustellen, dass Sie den bestmöglichen
+                    Service erhalten. Wir sind Experten in der Installation von Solarpanelen und der Integration von
+                    Ladestationen und sind stolz darauf, umweltfreundliche
                     und nachhaltige Energielösungen anzubieten.</p>
                 <br>
-                <p>Für alle unsere Kunden, die die Energiewende unterstützen und in die Zukunft investieren möchten, bieten wir weiterhin qualitativ hochwertige Produkte und professionelle Dienstleistungen an. Mit unserem Engagement für Innovation und Nachhaltigkeit
-                    ist <strong>Renova Energie</strong> Ihr zuverlässiger Partner für die besten Lösungen für Ihren Energiebedarf.</p>
+                <p>Für alle unsere Kunden, die die Energiewende unterstützen und in die Zukunft investieren möchten,
+                    bieten wir weiterhin qualitativ hochwertige Produkte und professionelle Dienstleistungen an. Mit
+                    unserem Engagement für Innovation und Nachhaltigkeit
+                    ist <strong>Renova Energie</strong> Ihr zuverlässiger Partner für die besten Lösungen für Ihren
+                    Energiebedarf.</p>
             </div>
         </div>
         <div class="career-container">
@@ -118,11 +128,11 @@ export default {
                     } else {
                         this.carrierError = true;
                         this.carrierMessage = res.data.message;
-                        Swal.close(); 
+                        Swal.close();
                     }
                 })
                 .catch(error => {
-                    Swal.close(); 
+                    Swal.close();
                     console.error("Error:", error);
                 });
         }
@@ -131,7 +141,6 @@ export default {
 </script>
 
 <style scoped>
-
 .about-us-container {
     min-height: 60vh;
     padding: 7% 10% 2% 10%;
@@ -168,14 +177,6 @@ export default {
     font-weight: 400;
     font-size: 2.4rem;
     color: #437D1F;
-}
-
-.section {
-    width: 100;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
 }
 
 .career-content {
@@ -310,8 +311,87 @@ export default {
     margin-right: 10px;
 }
 
-strong{
+strong {
     font-weight: 400;
     color: #437D1F;
+}
+
+@media (max-width: 1024px) {
+    .about-us-container {
+        padding: 12% 10%;
+    }
+
+    .about-us-title__icon {
+        font-size: 2.7rem;
+        margin-right: 2%;
+    }
+
+    .about-us-title__text h5 {
+        font-size: .7rem;
+        margin-bottom: -8px;
+    }
+
+    .about-us-title__text h2 {
+        font-size: 2.1rem;
+    }
+
+
+    .career-content__slogan {
+        flex-basis: 50%;
+    }
+
+    .career-content__slogan h4 {
+        font-size: 1.1rem;
+
+    }
+
+    .career-content__form {
+        flex-basis: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .career-content {
+        flex-direction: column;
+    }
+
+    .career-content__slogan {
+        flex-basis: 100%;
+    }
+
+    .career-content__slogan img {
+        height: 125px;
+    }
+
+    .career-content__slogan h4 {
+        font-size: 1rem;
+    }
+
+    .career-content__form {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .about-us-container {
+        padding: 20% 10%;
+    }
+
+    .about-us-title__icon {
+        font-size: 2rem;
+        margin-right: 3%;
+    }
+
+    .about-us-title__text h5 {
+        font-weight: 400;
+        font-size: .7rem;
+        margin-bottom: -5px;
+    }
+
+    .about-us-title__text h2 {
+        font-weight: 400;
+        font-size: 1.6rem;
+    }
 }
 </style>

@@ -37,8 +37,9 @@ export default {
 .container {
     height: 100vh;
     background-image: url('https://renovaenergie.ch/storage/bgolası.jpg');
+    background-size: cover;
     background-position: center;
-    background-size: contain;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,9 +66,9 @@ export default {
     text-transform: uppercase;
 }
 .station__text h1 span.space {
-    width: 1em; /* Boşluğun görünmesini sağlamak için genişlik ayarı */
+    width: 1em;
     display: inline-block;
-    background: transparent; /* Arka plan rengini şeffaf yaparak boşluğun görsel olarak net olmasını sağlar */
+    background: transparent;
 }
 
 /* Animasyon tanımı */
@@ -164,5 +165,74 @@ export default {
     100% {
         transform: rotate(360deg);
     }
+}
+
+@media (max-width: 768px){
+    .station-container {
+    display: flex;
+    align-items: center;
+    margin-top: -3%;
+    animation: fadeInOpacityBlack 2s forwards;
+}
+
+.station__text h1 {
+    font-size: 2rem;
+    color: #fff;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+.station__text h1 span {
+    display: inline-block;
+    animation: colorChange 2s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+    text-transform: uppercase;
+}
+.station__text h1 span.space {
+    width: 1em;
+    display: inline-block;
+    background: transparent;
+}
+
+}@media (max-width: 480px){
+    .station-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20%;
+    animation: fadeInOpacityBlack 2s forwards;
+}
+
+.station__text h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.7rem;
+    color: #fff;
+    margin-right: 20px;
+    display: inline-block;
+}
+.station__text h1 span.space {
+    width: .5em;
+    display: inline-block;
+    background: transparent;
+}
+.loader {
+    flex-basis: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.55);
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-right: 15%;
+}
 }
 </style>
