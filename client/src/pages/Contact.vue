@@ -1,14 +1,12 @@
 <template>
     <div>
         <app-nav     />
-        <app-contact style="margin-top: 5%;"/>
+        <app-contact id="app-contact"/>
         <app-footer  />
     </div>
 </template>
 
 <script>
-import axios from 'axios'
-import Swal from 'sweetalert2'
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
 import Contact from '../components/Contact.vue'
@@ -20,3 +18,23 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+#app-contact{
+    margin-top: 5%;
+}
+
+@media (max-width: 1024px){
+    #app-contact{
+    margin-top: 9%;
+}
+}@media (max-width: 768px){
+    #app-contact{
+    margin-top: 9%;
+}
+}@media (max-width: 480px){
+    #app-contact{
+    margin-top: 18%;
+}
+}
+</style>

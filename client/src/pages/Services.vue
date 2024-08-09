@@ -291,9 +291,7 @@ export default {
     height: 650px;
     border-radius: 20px 0 0 20px;
     display: block;
-    /* Boşluğu kaldırır */
     object-fit: cover;
-    /* Görüntünün boşluk bırakmaması için */
 }
 
 .service-card__text {
@@ -363,5 +361,109 @@ export default {
 .contact span:hover {
     background: #417D1F;
     color: #FFF;
+}
+
+@media (max-width: 1024px){
+    .services-container {
+    padding: 10% 10% 2% 10%;
+}
+.service-card-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column !important;
+    justify-content: start;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+    margin-bottom: 5%;
+    animation: fadeInOpacity 2s forwards;
+
+}
+.service-card__image {
+    flex-basis: 100%;
+    padding: 0;
+}
+
+.service-card__image img {
+    width: 100%;
+    height: auto !important;
+    border-radius: 20px 20px 0 0 !important;
+    display: block;
+    object-fit: cover;
+}
+}
+@media (max-width: 768px){
+    .services-container {
+    padding: 12% 10% 2% 10%;
+}
+.contact {
+    justify-content: space-around;
+}
+
+.contact p {
+    flex-basis: 50%;
+}
+
+.contact span {
+    flex-basis: 40%;
+
+}
+}@media (max-width: 480px){
+    .services-container {
+    padding: 20% 10% 2% 10%;
+}
+.services-title__icon {
+    font-size: 2rem;
+    margin-right: 3%;
+    color: #437D1F;
+}
+
+.services-title__text h5 {
+    font-weight: 400;
+    font-size: .7rem;
+    margin-bottom: -5px;
+    color: #437D1F;
+}
+
+.services-title__text h2 {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #437D1F;
+}
+.contact {
+    flex-direction: column;
+}
+
+.contact p {
+    flex-basis: 50%;
+}
+
+.contact span {
+    flex-basis: 40%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    font-size: .8rem;
+
+}
+.service-card__text h1 {
+    font-size: 1.4rem;
+}
+
+.service-card__text h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1%;
+}
+
+.service-card__text h3 {
+    font-size: 1rem;
+    margin-bottom: 1%;
+}
+
+.service-card__text p {
+    font-size: .8rem;
+    opacity: .85;
+    margin-bottom: 1%;
+    text-indent: 2%;
+}
 }
 </style>

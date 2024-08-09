@@ -12,11 +12,8 @@
         <div class="footer-sitemap">
             <h4>Seitenverzeichnis</h4>
             <router-link to="/">Startseite</router-link>
-            <!-- <a href="#">Ladestationen</a>
-            <a href="#">Antworten</a>
-            <a href="#">Preise</a> -->
             <router-link to="/uber-uns">Über uns</router-link>
-            <router-link to="#">Kontakt</router-link>
+            <router-link to="/kontakt">Kontakt</router-link>
         </div>
         <div class="copyright">
             <p>© 2024 Renova Energie | Entworfen von Hematit Agency</p>
@@ -119,22 +116,41 @@ h4 {
 
 @media (max-width:480px) {
     .footer-logo {
-        flex-basis: 90%;
-
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 0;
     }
-
+    .footer-logo img{
+        width: 60%;
+        height: auto;
+    }
     .footer-contact {
-        flex-basis: 90%;
-        margin-top: 9%;
-        margin-bottom: 5%;
-
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        margin: 5% 5%;
     }
 
     .footer-sitemap {
         margin-left: 0%;
-        flex-basis: 90%;
-        margin-bottom: 5%;
-    }
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin: 5% 5%;
 
+    }
+    .copyright {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 3%;
+    font-size: .7rem;
+}
 }
 </style>

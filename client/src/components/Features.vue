@@ -61,6 +61,7 @@ export default {
 
 <style scoped>
 .features-container {
+    margin-top: 4%; 
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -92,6 +93,7 @@ export default {
 .features-card__text h2 {
     margin: 0;
     font-size: 1.5rem;
+    font-weight: 500;
     color: #437D1F;
 }
 
@@ -99,5 +101,43 @@ export default {
     margin: 10px 0 0;
     color: #2e2e2e;
     opacity: .8;
+}
+
+@media (max-width: 1024px) {
+    .features-card__text h2 {
+    font-size: 1.3rem;
+}
+
+.features-card__text p {
+    font-size: .9rem;
+}
+}@media (max-width: 768px) {
+    .features-container {
+    margin-top: 8%; 
+
+}
+    .features-card__text h2 {
+    font-size: 1.2rem;
+}
+
+.features-card{
+    flex-basis: 40%;
+    margin: 1% 0;
+}
+}@media (max-width: 480px) {
+    .features-container {
+    margin-top: 12%; 
+
+}
+    .features-card__text h2 {
+    font-size: 1.2rem;
+}
+.features-card__text p{
+    font-size: .8;
+}
+.features-card{
+    flex-basis: 80%;
+    margin: 0% 0;
+}
 }
 </style>
