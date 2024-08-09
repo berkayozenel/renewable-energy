@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="min-height: 200vh;">
         <app-nav    />
         <app-header />
     </div>

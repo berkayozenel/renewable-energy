@@ -9,7 +9,7 @@
                         <router-link to="/">Startseite</router-link>
                     </li>
                     <li>
-                        <a href="#">Ladestationen</a>
+                        <router-link to="/ladestation">Ladestation</router-link>
                     </li>
                     <li>
                         <router-link to="/energielosungen">Energielösungen</router-link>
@@ -37,10 +37,10 @@
                         <router-link to="/">Startseite</router-link>
                     </li>
                     <li>
-                        <a href="#">Ladestationen</a>
+                        <router-link to="/ladestation">Ladestation</router-link>
                     </li>
                     <li>
-                        <a href="#">Antworten</a>
+                        <router-link to="/energielosungen">Energielösungen</router-link>
                     </li>
                     <li>
                         <router-link to="/preisgestaltung">Preisgestaltung</router-link>
@@ -69,16 +69,16 @@ export default {
         toggleMenu() {
             this.isMenuOpen = !this.isMenuOpen;
         },
-        handleScroll() {
-            const scrollTop = window.scrollY || document.documentElement.scrollTop;
-            const navbar = document.querySelector('.navbar');
+        // handleScroll() {
+        //     const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        //     const navbar = document.querySelector('.navbar');
 
-            if (scrollTop > window.innerHeight * 0.8) {
-                navbar.style.backdropFilter = `blur(${this.increasedBlur}px)`;
-            } else {
-                navbar.style.backdropFilter = `blur(${this.initialBlur}px)`;
-            }
-        }
+        //     if (scrollTop > window.innerHeight * 0.8) {
+        //         navbar.style.backdropFilter = `blur(${this.increasedBlur}px)`;
+        //     } else {
+        //         navbar.style.backdropFilter = `blur(${this.initialBlur}px)`;
+        //     }
+        // }
     },
     mounted() {
         window.addEventListener('scroll', this.handleScroll);
@@ -100,11 +100,9 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.3); 
+    background-color: #FFF; 
     color: #437D1F;
-    /* box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px; */
-    backdrop-filter: blur(0px); 
-    -webkit-backdrop-filter: blur(1px); 
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
     z-index: 999;
     transition: backdrop-filter 0.3s ease; 
 }

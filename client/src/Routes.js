@@ -3,7 +3,8 @@ import Home           from './pages/Home.vue';
 import Preis          from './pages/Price.vue';
 import UberUns        from "./pages/AboutUs.vue";
 import Contact        from "./pages/Contact.vue";
-import Services        from "./pages/Services.vue";
+import Services       from "./pages/Services.vue";
+import Station        from "./pages/Station.vue";
 
 
 const routes = [
@@ -47,7 +48,16 @@ const routes = [
         path: '/energielosungen', 
         component: Services,
         meta: {
-            title: 'Antworten | Renova Energie',
+            title: 'Energielösungen | Renova Energie',
+            description: '',
+            keywords: '',
+        }
+    },
+    { 
+        path: '/ladestation', 
+        component: Station,
+        meta: {
+            title: 'Ladestation | Renova Energie',
             description: '',
             keywords: '',
         }

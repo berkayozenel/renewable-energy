@@ -3,6 +3,7 @@
       <h1 class="typing-animation">
         Solarlösungen und Ladestationen für Elektrofahrzeuge für die Zukunft.
       </h1>
+      <router-link to="/energielosungen"><i class="fa-solid fa-arrow-pointer"></i>Energie-Lösungen hier entdecken. </router-link>
     </header>
   </template>
   
@@ -13,6 +14,7 @@
     height: 100vh;
     overflow: hidden;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #FFF;
@@ -33,7 +35,29 @@
     opacity: 1;
     z-index: -2;
   }
-  
+  a{
+    cursor: pointer;
+    background: transparent;
+    padding: 9px 30px;
+    border: 2px solid #437D1F;
+    border-radius: 5px;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: #437D1F;
+    text-decoration: none;
+    transition: all .4s ease;
+  }
+  a i{
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+  a:hover{
+    background: #437D1F;
+    color: #FFF;
+  }
   .header-container::after {
     content: "";
     position: absolute;
