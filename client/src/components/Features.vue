@@ -82,7 +82,6 @@ export default {
     /* background-color: #f0f0f0; Placeholder color for image */
 }
 .features-card__image img{
-    color: #437D1F;
     width: 80%;
     height: 80%;
 }

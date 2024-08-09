@@ -7,7 +7,7 @@
                     <h1>{{ formData.title }}</h1>
                 </div>
                 <div class="icon" @click="closeModal">
-                    <span><i class="fa-solid fa-x"></i></span>
+                    <span>X</span>
                 </div>
             </div>
             <div v-if="formError" class="form-error">
@@ -199,12 +199,18 @@ export default {
 }
 
 .icon span {
-    font-size: 1.1rem;
+    display: inline-block; 
+    width: 40px;         
+    height: 40px;        
+    font-size: 1.3rem;
+    font-weight: 400;
     color: #FFF;
-    padding: 12px 15px;
-    border-radius: 100%;
+    text-align: center;  
+    line-height: 40px;    
+    border-radius: 50%;    
     background-color: #417D1F;
 }
+
 
 .form-group {
     display: flex;
@@ -274,4 +280,44 @@ export default {
     font-size: 1.2rem;
     margin-right: 10px;
 }
+
+@media (max-width: 1024px){
+    .form-title h1{
+        font-size: 1.5rem;
+    }
+    .form-container{
+        width: 70%;
+    }
+}
+@media (max-width: 768px){
+    .form-title h1{
+        font-size: 1.3rem;
+    }
+    .form-container{
+        width: 85%;
+        padding: 15px;
+    }
+}
+@media (max-width: 480px){
+    .form-title h1{
+        font-size: 1.1rem;
+    }
+    .form-container{
+        width: 90%;
+        padding: 10px;
+    }
+    .form-group{
+        flex-wrap: wrap;
+    }
+    .form-element{
+        flex-basis: 100%;
+    }
+    .form-controls button {
+        padding: 8px 16px;
+    }
+    label{
+        font-size: .8rem;
+    }
+}
+
 </style>
