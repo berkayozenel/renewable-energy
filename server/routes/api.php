@@ -4,6 +4,7 @@ use App\Http\Controllers\CityController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\DistrictController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StationTypeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -22,11 +23,13 @@ use Illuminate\Support\Facades\Route;
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
-Route::post('send-career',   [MailController::class, 'sendMailCareer']);
-Route::post('send-contact',  [MailController::class, 'sendMailContact']);
-Route::post('send-solution', [MailController::class, 'sendMailSolution']);
+Route::post('send-career',    [MailController::class, 'sendMailCareer']);
+Route::post('send-contact',   [MailController::class, 'sendMailContact']);
+Route::post('send-solution',  [MailController::class, 'sendMailSolution']);
 
-Route::get('index-country',  [CountryController::class,'index']);
-Route::get('index-city',     [CityController::class,'index']);
-Route::get('index-district', [DistrictController::class,'index']);
-Route::get('index-station',  [StationTypeController::class,'index']);
+Route::get('index-country',   [CountryController::class,'index']);
+Route::get('index-city',      [CityController::class,'index']);
+Route::get('index-district',  [DistrictController::class,'index']);
+Route::get('index-station',   [StationTypeController::class,'index']);
+Route::get('product-features',[ProductController::class,'index']);
+Route::get('product-category',[ProductController::class,'indexByCategory']);
