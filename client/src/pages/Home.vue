@@ -4,6 +4,7 @@
         <app-header     />
         <about-us       />
         <app-features   />
+        <app-products   />
         <app-faqs       />
         <app-contact    />
         <app-footer     />
@@ -16,6 +17,7 @@ import Header     from '../components/Header.vue'
 import Footer     from '../components/Footer.vue'
 import AboutUs    from '../components/AboutUs.vue';
 import Features   from '../components/Features.vue';
+import Products   from '../components/Products.vue';
 import Faqs       from '../components/Faqs.vue';
 import Contact    from '../components/Contact.vue';
 
@@ -27,6 +29,7 @@ export default {
         'about-us'     : AboutUs,
         'app-features' : Features,
         'app-faqs'     : Faqs,
+        'app-products' : Products,
         'app-contact'  : Contact
     }
 }

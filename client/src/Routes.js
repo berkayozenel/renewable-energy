@@ -5,6 +5,7 @@ import UberUns        from "./pages/AboutUs.vue";
 import Contact        from "./pages/Contact.vue";
 import Services       from "./pages/Services.vue";
 import Station        from "./pages/Station.vue";
+import Products       from "./pages/Products.vue";
 
 
 const routes = [
@@ -13,8 +14,8 @@ const routes = [
         component: Home,
         meta: {
             title: 'Startseite | Renova Energie',
-            description: '',
-            keywords: '',
+            description: 'Renova Energie bietet hochwertige Ladestationen für Elektrofahrzeuge und Solar-Panels für erneuerbare Energien an. Entdecken Sie unsere Lösungen für nachhaltige Energie.',
+            keywords: 'Renova Energie, Ladestationen, Elektrofahrzeuge, Solar-Panels, erneuerbare Energien',
         }
     },
     { 
@@ -22,8 +23,8 @@ const routes = [
         component: Preis,
         meta: {
             title: 'Preisgestaltung | Renova Energie',
-            description: '',
-            keywords: '',
+            description: 'Erfahren Sie mehr über die Preisgestaltung unserer Ladestationen und Solar-Panels. Transparente Preise für erstklassige Produkte im Bereich erneuerbare Energien.',
+            keywords: 'Preisgestaltung, Ladestationen, Solar-Panels, erneuerbare Energien, Renova Energie',
         }
     },
     { 
@@ -31,8 +32,8 @@ const routes = [
         component: UberUns,
         meta: {
             title: 'Über Uns | Renova Energie',
-            description: '',
-            keywords: '',
+            description: 'Erfahren Sie mehr über Renova Energie, unsere Expertise im Bereich Elektromobilität und Solarenergie sowie unser Engagement für nachhaltige Lösungen.',
+            keywords: 'Renova Energie, Über uns, Elektromobilität, Solarenergie, erneuerbare Energien',
         }
     },
     { 
@@ -40,8 +41,8 @@ const routes = [
         component: Contact,
         meta: {
             title: 'Kontaktieren Sie Uns | Renova Energie',
-            description: '',
-            keywords: '',
+            description: 'Kontaktieren Sie uns für Informationen zu unseren Ladestationen und Solar-Panels. Wir stehen Ihnen für Fragen und Beratung zur Verfügung.',
+            keywords: 'Kontakt, Renova Energie, Ladestationen, Solar-Panels, Kundenservice',
         }
     },
     { 
@@ -49,8 +50,8 @@ const routes = [
         component: Services,
         meta: {
             title: 'Energielösungen | Renova Energie',
-            description: '',
-            keywords: '',
+            description: 'Entdecken Sie unsere Energielösungen, darunter innovative Ladestationen für Elektrofahrzeuge und effiziente Solar-Panels für nachhaltige Energie.',
+            keywords: 'Energielösungen, Ladestationen, Solar-Panels, erneuerbare Energien, Renova Energie',
         }
     },
     { 
@@ -58,12 +59,21 @@ const routes = [
         component: Station,
         meta: {
             title: 'Ladestation | Renova Energie',
-            description: '',
-            keywords: '',
+            description: 'Finden Sie hochwertige Ladestationen für Elektrofahrzeuge bei Renova Energie. Erleben Sie erstklassige Ladeinfrastruktur für nachhaltige Mobilität.',
+            keywords: 'Ladestation, Elektrofahrzeuge, Renova Energie, Ladeinfrastruktur, nachhaltige Mobilität',
         }
     },
-
+    { 
+        path: '/produkte', 
+        component: Products,
+        meta: {
+            title: 'Produkte | Renova Energie',
+            description: 'Unsere Produkte umfassen Ladestationen für Elektrofahrzeuge und Solar-Panels. Entdecken Sie unsere Angebote für eine nachhaltige Energiezukunft.',
+            keywords: 'Produkte, Ladestationen, Solar-Panels, Renova Energie, nachhaltige Energie',
+        }
+    },
 ];
+
 
 const router = createRouter({
     history: createWebHistory(),

@@ -18,6 +18,9 @@
                         <router-link to="/preisgestaltung">Preisgestaltung</router-link>
                     </li>
                     <li>
+                        <router-link to="/produkte">Produkte</router-link>
+                    </li>
+                    <li>
                         <router-link to="/uber-uns">Über uns</router-link>
                     </li>
                     <li>
@@ -44,6 +47,9 @@
                 </li>
                 <li>
                     <router-link to="/preisgestaltung">Preisgestaltung</router-link>
+                </li>
+                <li>
+                    <router-link to="/produkte">Produkte</router-link>
                 </li>
                 <li>
                     <router-link to="/uber-uns">Über uns</router-link>
@@ -170,7 +176,7 @@ export default {
     justify-content: center;
     align-items: center;
     background-color: #437D1F;
-    padding: 20% 5% 5% 5%;
+    padding: 10% 5% 5% 5%;
     position: fixed;
     top: 0;
     left: 0;
