@@ -5,6 +5,7 @@
         <about-us       />
         <app-features   />
         <app-faqs       />
+        <app-contact    />
     </div>
 </template>
 
@@ -15,6 +16,7 @@ import Footer     from '../components/Footer.vue'
 import AboutUs    from '../components/AboutUs.vue';
 import Features   from '../components/Features.vue';
 import Faqs       from '../components/Faqs.vue';
+import Contact    from '../components/Contact.vue';
 
 export default {
     components:{
@@ -23,7 +25,8 @@ export default {
         'app-footer'   : Footer,
         'about-us'     : AboutUs,
         'app-features' : Features,
-        'app-faqs'     : Faqs
+        'app-faqs'     : Faqs,
+        'app-contact'  : Contact
     }
 }
 </script>

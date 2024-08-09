@@ -1,6 +1,14 @@
 <template>
     <div class="faq-container">
-        <h1>Häufige Fragen (FAQs)</h1>
+        <div class="faq-title">
+            <div class="faq-title__icon">
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="faq-title__text">
+                <h5>Renova Energie</h5>
+                <h2>Häufige Fragen</h2>
+            </div>
+        </div>
         <div v-for="(faq, index) in faqs" :key="index" class="faq-item">
             <div class="faq-question" @click="toggleAnswer(index)">
                 <h2>{{ faq.question }}</h2>
@@ -61,7 +69,31 @@ export default {
     margin: auto;
     padding: 20px;
 }
+.faq-title {
+    margin: 3% 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
 
+.faq-title__icon {
+    font-size: 3rem;
+    margin-right: 1%;
+    color: #437D1F;
+}
+
+.faq-title__text h5 {
+    font-weight: 400;
+    font-size: .7rem;
+    margin-bottom: -10px;
+    color: #437D1F;
+}
+
+.faq-title__text h2 {
+    font-weight: 400;
+    font-size: 2.4rem;
+    color: #437D1F;
+}
 .faq-item {
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
@@ -74,19 +106,24 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #437D1F;
+    color: #FFF;
+    padding: 1%;
+    border-radius: 5px;
 }
 
 .faq-arrow {
-    font-size: 1.5rem;
-    color: #437D1F;
+    font-size: 1.3rem;
+    color: #FFF;
 }
 
 .faq-answer {
     padding: 10px 0;
-    font-size: 1rem;
+    font-size: .9rem;
     color: #555;
 }
 h2{
     font-weight: 400;
+    font-size: 1.1rem;
 }
 </style>
