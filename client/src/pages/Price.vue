@@ -13,7 +13,7 @@
             </div>
             <div class="preis-section-one">
                 <div class="preis-section-one__image">
-                    <img src="https://renovaenergie.ch/storage/preis-page/asset-1.jpg" >
+                    <img src="https://renovaenergie.ch/storage/preis-page/asset-1.jpg">
                 </div>
                 <div class="preis-section-one__content">
                     <h3>AC-Steckdosentarif</h3>
@@ -32,7 +32,7 @@
             </div>
             <div class="preis-section-two">
                 <div class="preis-section-two__image">
-                    <img src="https://renovaenergie.ch/storage/preis-page/asset-2.jpg" >
+                    <img src="https://renovaenergie.ch/storage/preis-page/asset-2.jpg">
                 </div>
                 <div class="preis-section-two__content">
                     <h3>DC-Steckdosentarif</h3>
@@ -61,63 +61,69 @@
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
 export default {
-    components:{
-        'app-nav'   : Navbar,
+    components: {
+        'app-nav': Navbar,
         'app-footer': Footer
     }
 }
 </script>
 
 <style scoped>
-.preis-container{
+.preis-container {
     padding: 7% 10%;
 }
-.preis-title{
+
+.preis-title {
     margin: 3% 0;
     display: flex;
     justify-content: start;
     align-items: center;
 }
-.preis-title__icon{
+
+.preis-title__icon {
     font-size: 3rem;
     margin-right: 1%;
     color: #437D1F;
 }
-.preis-title__text h5{
+
+.preis-title__text h5 {
     font-weight: 400;
     font-size: .7rem;
     margin-bottom: -10px;
     color: #437D1F;
-
 }
-.preis-title__text h2{
+
+.preis-title__text h2 {
     font-weight: 400;
     font-size: 2.4rem;
     color: #437D1F;
-
 }
-.preis-section-one{
+
+.preis-section-one {
     margin: 5% 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: stretch; /* align-items: stretch olarak değiştirildi */
-    height: auto; /* Yüksekliğin otomatik olarak ayarlanmasını sağlar */
+    align-items: stretch;
+    height: auto;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     border-radius: 15px;
-    animation: fadeInRight 2s forwards;
+    animation: fadeInOpacity 2s forwards;
     overflow-y: hidden;
 }
-.preis-section-one__image{
+
+.preis-section-one__image {
     flex-basis: 25%;
     height: auto;
 }
-.preis-section-one__image img{
+
+.preis-section-one__image img {
     width: 100%;
     height: 100%;
     border-radius: 15px 0 0 15px;
 }
-.preis-section-one__content{
+
+.preis-section-one__content {
     flex-basis: 75%;
     padding: 0 5%;
     display: flex;
@@ -125,18 +131,21 @@ export default {
     justify-content: center;
     align-items: start;
 }
-.preis-section-one__content h3{
+
+.preis-section-one__content h3 {
     font-weight: 400;
     color: #437D1F;
 }
-.line{
+
+.line {
     margin: 2% 0;
     width: 100%;
     height: 2px;
     border-radius: 5px;
     background: #437D1F;
 }
-.line-opacity{
+
+.line-opacity {
     margin: 2% 0 1% 0;
     width: 100%;
     height: 2px;
@@ -144,42 +153,52 @@ export default {
     background: gray;
     opacity: .6;
 }
-.table-head, .table-row{
+
+.table-head,
+.table-row {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.table-head span{
+
+.table-head span {
     flex-basis: 50%;
     font-weight: 500;
 }
-.table-row span{
+
+.table-row span {
     flex-basis: 50%;
     opacity: .8;
 }
-.preis-section-two{
+
+.preis-section-two {
     margin: 5% 0;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
-    align-items: stretch; /* align-items: stretch olarak değiştirildi */
-    height: auto; /* Yüksekliğin otomatik olarak ayarlanmasını sağlar */
+    align-items: stretch;
+    /* align-items: stretch olarak değiştirildi */
+    height: auto;
+    /* Yüksekliğin otomatik olarak ayarlanmasını sağlar */
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     border-radius: 15px;
-    animation: fadeInLeft 2s forwards;
+    animation: fadeInOpacity 2s forwards;
     overflow-y: hidden;
 }
-.preis-section-two__image{
+
+.preis-section-two__image {
     flex-basis: 25%;
     height: auto;
 }
-.preis-section-two__image img{
+
+.preis-section-two__image img {
     width: 100%;
     height: 100%;
     border-radius: 0 15px 15px 0;
 }
-.preis-section-two__content{
+
+.preis-section-two__content {
     flex-basis: 75%;
     padding: 0 5%;
     display: flex;
@@ -187,9 +206,115 @@ export default {
     justify-content: center;
     align-items: start;
 }
-.preis-section-two__content h3{
+
+.preis-section-two__content h3 {
     font-weight: 400;
     color: #437D1F;
 }
 
+@media (max-width: 1024px) {
+    .preis-container {
+        padding: 12% 10%;
+    }
+
+    .preis-title__icon {
+        font-size: 2.7rem;
+        margin-right: 2%;
+    }
+
+    .preis-title__text h5 {
+        font-size: .7rem;
+        margin-bottom: -8px;
+    }
+
+    .preis-title__text h2 {
+        font-size: 2.1rem;
+    }
+
+    .preis-section-one__image {
+        flex-basis: 40%;
+        height: auto;
+    }
+
+    .preis-section-two__image {
+        flex-basis: 40%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .preis-section-one {
+        flex-direction: column;
+    }
+
+    .preis-section-one__image img {
+        height: 80%;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .preis-section-one__content {
+        flex-basis: 100%;
+        padding: 5% 5%;
+    }
+
+    .preis-section-two {
+        flex-direction: column;
+    }
+
+    .preis-section-two__image img {
+        height: 80%;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .preis-section-two__content {
+        flex-basis: 100%;
+        padding: 5% 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .preis-container {
+        padding: 20% 10%;
+    }
+
+    .preis-title__icon {
+        font-size: 2rem;
+        margin-right: 3%;
+    }
+
+    .preis-title__text h5 {
+        font-weight: 400;
+        font-size: .7rem;
+        margin-bottom: -5px;
+    }
+
+    .preis-title__text h2 {
+        font-weight: 400;
+        font-size: 1.6rem;
+    }
+
+    .table-head,
+    .table-row {
+        justify-content: start;
+    }
+
+    .table-head span {
+        font-size: .9rem;
+    }
+
+    .table-row span {
+        font-size: .8rem;
+    }
+
+    .table-head :nth-child(2),
+    .table-row :nth-child(2) {
+        flex-basis: 30%;
+        margin-left: 15px;
+    }
+
+    .table-head :nth-child(1),
+    .table-row :nth-child(1) {
+        flex-basis: 65%;
+    }
+}
 </style>

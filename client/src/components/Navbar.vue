@@ -1,8 +1,8 @@
-
 <template>
     <div class="container">
         <header class="navbar">
-            <router-link  to="/"><img class="logo"  src="https://renovaenergie.ch/storage/logo/logo.svg" alt="Renova Energie Logo"/></router-link>
+            <router-link to="/"><img class="logo" src="https://renovaenergie.ch/storage/logo/logo.svg"
+                    alt="Renova Energie Logo" /></router-link>
             <nav>
                 <ul class="nav-links">
                     <li>
@@ -34,23 +34,23 @@
         <nav v-if="isMenuOpen" class="open-menu">
             <ul class="nav-open-links">
                 <li>
-                        <router-link to="/">Startseite</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/ladestation">Ladestation</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/energielosungen">Energielösungen</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/preisgestaltung">Preisgestaltung</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/uber-uns">Über uns</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/kontakt">Kontaktieren Sie Uns</router-link>
-                    </li>
+                    <router-link to="/">Startseite</router-link>
+                </li>
+                <li>
+                    <router-link to="/ladestation">Ladestation</router-link>
+                </li>
+                <li>
+                    <router-link to="/energielosungen">Energielösungen</router-link>
+                </li>
+                <li>
+                    <router-link to="/preisgestaltung">Preisgestaltung</router-link>
+                </li>
+                <li>
+                    <router-link to="/uber-uns">Über uns</router-link>
+                </li>
+                <li>
+                    <router-link to="/kontakt">Kontaktieren Sie Uns</router-link>
+                </li>
             </ul>
         </nav>
     </div>
@@ -61,8 +61,8 @@ export default {
     data() {
         return {
             isMenuOpen: false,
-            initialBlur: 5, 
-            increasedBlur: 15 
+            initialBlur: 5,
+            increasedBlur: 15
         };
     },
     methods: {
@@ -96,16 +96,21 @@ export default {
     left: 0;
     width: 100%;
     padding: 3% 5%;
-    height: 70px; 
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #FFF; 
+    background-color: #FFF;
     color: #437D1F;
     box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
     z-index: 999;
-    transition: backdrop-filter 0.3s ease; 
+    transition: backdrop-filter 0.3s ease;
 }
+
+.navbar a {
+    width: 20%;
+}
+
 .logo {
     width: 100%;
     height: 75px;
@@ -180,6 +185,7 @@ export default {
         transform: translateY(-100%);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -206,53 +212,75 @@ export default {
 /* Responsive */
 
 @media (max-width: 1024px) {
-    .logo{
+    .logo {
         width: 80%;
     }
+
     .navbar {
         padding: 5% 5%;
     }
+
     .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
     }
+
     .hamburger {
         display: flex;
     }
+
+    .navbar a {
+        width: 40%;
+    }
 }
+
 @media (max-width: 768px) {
-    .logo{
-        width: 70%;
+    .logo {
+        width: 50%;
+        height: auto;
     }
+
     .navbar {
         padding: 5% 5%;
     }
+
     .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
     }
+
     .hamburger {
         display: flex;
+    }
+
+    .navbar a {
+        width: 50%;
     }
 }
+
 @media (max-width: 480px) {
-    .logo{
+    .logo {
         width: 70%;
     }
-  
+
     .navbar {
         padding: 5% 5%;
     }
+
     .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
     }
+
     .hamburger {
         display: flex;
+    }
+
+    .navbar a {
+        width: 60%;
     }
 }
 </style>
-

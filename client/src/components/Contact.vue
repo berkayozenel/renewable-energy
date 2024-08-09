@@ -27,8 +27,9 @@
                     <div class="form-element">
                         <label for="subject">Subject</label>
                         <select name="subject" id="subject" v-model="formData.subject">
-                                    <option v-for="item in subjects" :key="item.id" :value="item.subject">{{ item.subject }}</option>
-                                </select>
+                            <option v-for="item in subjects" :key="item.id" :value="item.subject">{{ item.subject }}
+                            </option>
+                        </select>
                     </div>
                     <div class="form-element">
                         <label for="nameSurname">Name und Nachname</label>
@@ -77,17 +78,17 @@ export default {
             contactError: false,
             contactMessage: null,
             subjects: [{
-                    id: 0,
-                    subject: 'Bitte wählen Sie ein Thema.'
-                },
-                {
-                    id: 1,
-                    subject: 'Vorschlag / Kommentar'
-                },
-                {
-                    id: 2,
-                    subject: 'Beschwerde'
-                }
+                id: 0,
+                subject: 'Bitte wählen Sie ein Thema.'
+            },
+            {
+                id: 1,
+                subject: 'Vorschlag / Kommentar'
+            },
+            {
+                id: 2,
+                subject: 'Beschwerde'
+            }
             ]
         }
     },
@@ -114,11 +115,11 @@ export default {
                     } else {
                         this.contactError = true;
                         this.contactMessage = res.data.message;
-                        Swal.close(); 
+                        Swal.close();
                     }
                 })
                 .catch(error => {
-                    Swal.close(); 
+                    Swal.close();
                     console.error("Error:", error);
                 });
         }
@@ -131,7 +132,7 @@ export default {
     padding: 2% 10%;
     min-height: 60vh;
     animation: fadeInOpacity 2s forwards;
- 
+
 }
 
 .contact-content {
@@ -154,25 +155,30 @@ export default {
     justify-content: start;
     align-items: start;
 }
-.contact-content__info a{
+
+.contact-content__info a {
     text-decoration: none;
     color: #000;
     opacity: 0.7;
     font-size: 1.1rem;
     margin: 1% 0;
 }
-.contact-content__info a i{
+
+.contact-content__info a i {
     margin-right: 10px;
 }
-.contact-content__info a:hover{
+
+.contact-content__info a:hover {
     opacity: 1;
 }
-.contact-content__info h3{
+
+.contact-content__info h3 {
     font-weight: 400;
     font-size: 1.5rem;
     margin-bottom: 1%;
     color: #437D1F;
 }
+
 .contact-title__icon {
     font-size: 3rem;
     margin-right: 1%;
@@ -304,5 +310,84 @@ export default {
 .form-error span i {
     font-size: 1.2rem;
     margin-right: 10px;
+}
+
+@media (max-width: 1024px) {
+    .contact-container {
+        padding: 2% 5%;
+
+    }
+
+    .contact-title__icon {
+        font-size: 2.7rem;
+        margin-right: 2%;
+    }
+
+    .contact-title__text h5 {
+        font-size: .7rem;
+        margin-bottom: -8px;
+    }
+
+    .contact-title__text h2 {
+        font-size: 2.1rem;
+    }
+
+    .contact-content {
+        justify-content: space-around;
+    }
+
+    .contact-content__info {
+        flex-basis: 45%;
+
+    }
+
+    .contact-content__form {
+        flex-basis: 45%;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .contact-content__info {
+        flex-basis: 100%;
+        padding: 0 6%;
+
+    }
+
+    .contact-content__form {
+        flex-basis: 100%;
+        width: 100%;
+        margin-top: 3%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-title__icon {
+        font-size: 2rem;
+        margin-right: 3%;
+    }
+
+    .contact-title__text h5 {
+        font-weight: 400;
+        font-size: .7rem;
+        margin-bottom: -5px;
+    }
+
+    .contact-title__text h2 {
+        font-weight: 400;
+        font-size: 1.6rem;
+    }
+    .contact-content__info a {
+    font-size: .9rem;
+}
+.contact-content__info h3 {
+    font-size: 1.2rem;
+}
 }
 </style>
